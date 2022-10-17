@@ -1,0 +1,134 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Actors/Ghost.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Niveles/tileset.png" type="Texture" id=3]
+[ext_resource path="res://Actors/Ghost Archer.tscn" type="PackedScene" id=4]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 16, 0, 16, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=1]
+1/name = "tileset.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 160, 64, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 3 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tileset.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 48, 176, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 4 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tileset.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 16, 16, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "tileset.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 16, 144, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Actores" type="Node2D" parent="."]
+
+[node name="Player" parent="Actores" instance=ExtResource( 1 )]
+position = Vector2( 237, 35 )
+
+[node name="Ghost K" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( 83, 35 )
+
+[node name="Ghost K2" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( 432, 35 )
+
+[node name="Ghost K3" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( 589, 35 )
+
+[node name="Ghost K4" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( -78, 35 )
+
+[node name="Ghost K5" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( 11, 35 )
+
+[node name="Ghost K6" parent="Actores" instance=ExtResource( 2 )]
+position = Vector2( 505, 35 )
+
+[node name="Ghost Archer" parent="Actores" instance=ExtResource( 4 )]
+position = Vector2( 480, 35 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 131096, 4, 0, 131097, 4, 0, 131098, 4, 0, 131099, 4, 0, 131100, 4, 0, 131101, 4, 0, 131102, 4, 0, 131103, 4, 0, 131104, 4, 0, 131105, 4, 0, 131106, 4, 0, 131107, 4, 0, 131108, 4, 0, 131109, 4, 0, 131110, 4, 0, 131111, 4, 0, 131112, 4, 0, 131113, 4, 0, 131114, 4, 0, 131115, 4, 0, 131116, 4, 0, 131117, 4, 0, 196608, 1, 0, 196612, 3, 0, 196613, 3, 0, 196614, 3, 0, 196615, 3, 0, 196616, 3, 0, 196617, 3, 0, 196618, 3, 0, 196619, 3, 0, 196620, 3, 0, 196621, 3, 0, 196622, 3, 0, 196623, 3, 0, 196624, 3, 0, 196625, 3, 0, 196626, 3, 0, 196627, 3, 0, 196628, 3, 0, 196629, 3, 0, 196630, 3, 0, 196631, 3, 0, 196632, 3, 0, 196633, 3, 0, 196634, 3, 0, 196635, 3, 0, 196636, 3, 0, 196637, 3, 0, 196638, 3, 0, 196639, 3, 0, 196640, 3, 0, 196641, 3, 0, 196642, 3, 0, 196643, 3, 0, 196644, 3, 0, 196645, 3, 0, 196646, 3, 0, 196647, 3, 0, 196648, 3, 0, 196649, 3, 0, 196650, 3, 0, 196651, 3, 0, 196652, 3, 0, 196653, 3, 0, 196654, 3, 0, 262147, 2, 0, 262148, 3, 0, 262149, 3, 0, 262150, 3, 0, 262151, 3, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 262165, 3, 0, 262166, 3, 0, 262167, 3, 0, 262168, 3, 0, 262169, 3, 0, 262170, 3, 0, 262171, 3, 0, 262172, 3, 0, 262173, 3, 0, 262174, 3, 0, 262175, 3, 0, 262176, 3, 0, 262177, 3, 0, 262178, 3, 0, 262179, 3, 0, 262180, 3, 0, 262181, 3, 0, 262182, 3, 0, 262183, 3, 0, 262184, 3, 0, 262185, 3, 0, 262186, 3, 0, 262187, 3, 0, 262188, 3, 0, 262189, 3, 0, 262190, 3, 0, 327684, 2, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327697, 3, 0, 327698, 3, 0, 327699, 3, 0, 327700, 3, 0, 327701, 3, 0, 327702, 3, 0, 327703, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0, 327710, 3, 0, 327711, 3, 0, 327712, 3, 0, 327713, 3, 0, 327714, 3, 0, 327715, 3, 0, 327716, 3, 0, 327717, 3, 0, 327718, 3, 0, 327719, 3, 0, 327720, 3, 0, 327721, 3, 0, 327722, 3, 0, 327723, 3, 0, 327724, 3, 0, 327725, 3, 0, 327726, 3, 0, 393220, 0, 0, 393221, 2, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0, 393226, 3, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393234, 3, 0, 393235, 3, 0, 393236, 3, 0, 393237, 3, 0, 393238, 3, 0, 393239, 3, 0, 393240, 3, 0, 393241, 3, 0, 393242, 3, 0, 393243, 3, 0, 393244, 3, 0, 393245, 3, 0, 393246, 3, 0, 393247, 3, 0, 393248, 3, 0, 393249, 3, 0, 393250, 3, 0, 393251, 3, 0, 393252, 3, 0, 393253, 3, 0, 393254, 3, 0, 393255, 3, 0, 393256, 3, 0, 393257, 3, 0, 393258, 3, 0, 393259, 3, 0, 393260, 3, 0, 393261, 3, 0, 393262, 3, 0, 458756, 0, 0, 458758, 2, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 3, 0, 458768, 3, 0, 458769, 3, 0, 458770, 3, 0, 458771, 3, 0, 458772, 3, 0, 458773, 3, 0, 458774, 3, 0, 458775, 3, 0, 458776, 3, 0, 458777, 3, 0, 458778, 3, 0, 458779, 3, 0, 458780, 3, 0, 458781, 3, 0, 458782, 3, 0, 458783, 3, 0, 458784, 3, 0, 458785, 3, 0, 458786, 3, 0, 458787, 3, 0, 458788, 3, 0, 458789, 3, 0, 458790, 3, 0, 458791, 3, 0, 458792, 3, 0, 458793, 3, 0, 458794, 3, 0, 458795, 3, 0, 458796, 3, 0, 458797, 3, 0, 458798, 3, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 524325, 0, 0, 524326, 0, 0, 524327, 0, 0, 524328, 0, 0 )
+
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K2" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K3" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K4" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K5" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost K6" method="_on_Player_make_damage"]
+[connection signal="make_damage" from="Actores/Player" to="Actores/Ghost Archer" method="_on_Player_make_damage"]
+[connection signal="take_damage" from="Actores/Ghost K" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost K2" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost K3" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost K4" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost K5" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost K6" to="Actores/Player" method="take_damage"]
+[connection signal="take_damage" from="Actores/Ghost Archer" to="Actores/Player" method="_on_Ghost_Archer_take_damage"]
